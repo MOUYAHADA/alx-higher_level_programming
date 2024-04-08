@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-"""Module for the Rectangle class """
+"""Module for Rectangle class """
 
 
 class Rectangle:
@@ -12,12 +12,12 @@ class Rectangle:
 
     @property
     def width(self):
-        """Get rectangle width"""
+        """gets width"""
         return self.__width
 
     @width.setter
     def width(self, value):
-        """Set rectangle width"""
+        """sets width"""
         if not isinstance(value, int):
             raise TypeError("width must be an integer")
         if value < 0:
@@ -26,17 +26,19 @@ class Rectangle:
 
     @property
     def height(self):
-        """Get rectangle height"""
+        """gets height"""
         return self.__height
 
     @height.setter
     def height(self, value):
-        """Set rectangle height"""
+        """sets height"""
         if not isinstance(value, int):
             raise TypeError("height must be an integer")
         if value < 0:
             raise ValueError("height must be >= 0")
-        self.__height = value    def area(self):
+        self.__height = value
+
+    def area(self):
         """gets area"""
         return self.__width * self.__height
 
